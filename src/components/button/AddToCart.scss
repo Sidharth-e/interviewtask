@@ -1,0 +1,13 @@
+.AddToCartButton{
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: black;
+    color: #ffffff;
+    &:hover{
+        transition: .3s all;
+        transform: scale(1.2);
+      }
+}

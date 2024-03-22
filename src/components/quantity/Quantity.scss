@@ -1,0 +1,26 @@
+.Quantity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    button{
+        border: none;
+        outline: none;
+        padding: 10px;
+        background-color: black;
+        color: #ffffff;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            transition: .3s all;
+            transform: scale(0.9);
+          }
+    }
+    p{
+        font-weight: bolder;
+    }
+}

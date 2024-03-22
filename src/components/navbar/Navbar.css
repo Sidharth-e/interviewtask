@@ -1,0 +1,117 @@
+/* Navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: black;
+  }
+  
+  .navbar-logo {
+    font-size: 30px;
+    font-weight:bolder;
+    /* font-family: 'Rubik Doodle Shadow'; */
+    font-style: oblique;
+    letter-spacing: 4px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    font-size: large;
+  }
+  
+  .navbar-links a {
+    color: black;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+  
+  .hamburger-menu {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .line {
+    
+    height: 6px;
+    background-color: black;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  .line:nth-child(1){
+    width: 45px;
+  
+  }
+  .line:nth-child(2){
+    width: 35px;
+  
+  }
+  .open:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+    width: 40px;
+  }
+  
+  .open:nth-child(2) {
+    width: 40px;
+    transform: translateY(-8px) rotate(45deg);
+  
+  }
+  
+
+  
+  .navbar-links {
+    display: flex;
+    flex-direction: row; /* Show links in a row on larger screens */
+  }
+  .navbar-links a.active {
+
+    text-decoration: underline; 
+    /* // text-decoration-color: #ff0; */
+    /* Add other styles as needed */
+  }
+  
+  @media (max-width: 768px) {
+  
+    /* .navbar-links {
+      display: none; 
+    } */
+    @keyframes fadeIn {
+      from {
+ 
+        transform: translateY(-60px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+    .navbar-links.active {
+      display: flex; /* Hide links on responsive views by default */
+      flex-direction: column; /* Show links in a column on responsive screens */
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #ffd;
+      border-radius: 5px;
+      z-index: 9999;
+      font-size: 30px;
+      font-weight: bold;
+      animation: fadeIn 0.5s ease forwards;
+    }
+  
+    .hamburger-menu {
+      display: flex; /* Show hamburger icon on responsive views */
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  
